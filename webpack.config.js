@@ -12,6 +12,7 @@ module.exports = {
     static: "./dist",
     watchFiles: path.resolve(__dirname, "src"),
   },
+  devtool: "eval",
   plugins: [
     new CopyPlugin({
       patterns: [{ from: "static/*" }],

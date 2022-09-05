@@ -1,5 +1,5 @@
 import * as PIXI from "pixi.js";
-import GameContainer from "./gameContainer";
+import GameArea from "./gameArea";
 
 // set up applicaiton
 const appW = 750;
@@ -14,7 +14,8 @@ const app = new PIXI.Application({
 document.body.appendChild(app.view);
 
 // set up game container
-const gameContainer = new GameContainer(PIXI, app);
+const gameArea = new GameArea(app);
+app.stage.addChild(gameArea.gameContainer);
 
 // update game state every second
 let time = 0;
@@ -24,8 +25,8 @@ app.ticker.add((delta) => {
   const deltaMs = delta / 60;
   if (time + deltaMs > tick + tickLength) {
     tick += 1;
-    console.log("tick", tick);
-    gameContainer.tick();
+    // console.log("tick", tick);
+    gameArea.tick();
   }
   time += deltaMs;
 });
