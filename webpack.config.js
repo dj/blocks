@@ -15,7 +15,7 @@ module.exports = {
   devtool: "eval",
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: "static/*" }],
+      patterns: [{ from: "static" }],
     }),
   ],
 };
