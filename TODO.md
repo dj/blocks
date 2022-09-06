@@ -1,7 +1,8 @@
 # TODO
 
 - [x] create class for falling block
-- [ ] implement different block shapes
+- [x] implement different block shapes
+- [ ] implement rotation method
 - [ ] move block to pile when it hits the ground
 - [ ] move block to pile when it hits the pile
 - [ ] handle user input
