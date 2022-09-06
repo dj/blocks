@@ -51,7 +51,8 @@ export default class ActiveTetromino {
 
   tick() {
     this.pos.y += 1;
-    this.container.x = this.container.x;
-    this.container.y = this.pos.y * GRID_SIZE;
+    // this.container.x = this.container.x;
+    // this.container.y = this.pos.y * GRID_SIZE;
+    this.container.rotation += Math.PI / 2;
   }
 }
