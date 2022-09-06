@@ -10,11 +10,15 @@ export default class ActiveTetromino {
   constructor() {
     this.color = 0xfe5f55;
     this.shape = "square";
-    this.pos = { x: 0, y: 0 };
     this.pieces = null;
+
+    // set up initial position
+    if (this.shape === "square") {
+      this.pos = { x: 4 * GRID_SIZE, y: 0 };
+    }
     this.container = new PIXI.Container();
-    this.container.x = 0;
-    this.container.y = 0;
+    this.container.x = this.pos.x;
+    this.container.y = this.pos.y;
     this.graphic = new PIXI.Graphics();
 
     // init tetromino pieces
