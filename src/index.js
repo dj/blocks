@@ -9,7 +9,7 @@ const app = new PIXI.Application({
   width: appW,
   height: appH,
   backgroundColor: 0x94c9a9,
-  resolution: window.devicePixelRatio || 1,
+  resolution: 1,
 });
 document.body.appendChild(app.view);
 
